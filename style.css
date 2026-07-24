@@ -1,0 +1,541 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f4ef;
+    color:#444;
+}
+
+.hero{
+    width:100%;
+    height:100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("nadin amizah (1).jpg");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.2);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:white;
+    max-width:700px;
+    padding:20px;
+    animation:fadeUp 1.5s;
+}
+
+.hero h3{
+    font-size:20px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:75px;
+    font-family:'Playfair Display',serif;
+}
+
+.hero h2{
+    font-size:38px;
+    margin-top:15px;
+}
+
+.hero p{
+    margin-top:25px;
+    line-height:35px;
+    font-size:18px;
+}
+
+button{
+    margin-top:40px;
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+    background:#d9b89d;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+button:hover{
+    background:white;
+    color:#8c6b58;
+    transform:scale(1.05);
+}
+
+section{
+    padding:90px 10%;
+}
+
+#gallery{
+
+    background:#faf5ef;
+    color:#5b4d42;
+    text-align:center;
+
+}
+
+#gallery h2{
+
+    font-size:48px;
+    font-family:'Playfair Display', serif;
+    margin-bottom:15px;
+
+}
+
+.subtitle{
+
+    font-size:18px;
+    color:#7b6c5f;
+    margin-bottom:50px;
+    line-height:30px;
+
+}
+
+#gallery{
+
+    background:#f9f5ef;
+    color:#5f5146;
+    text-align:center;
+
+}
+
+#gallery h2{
+
+    font-size:48px;
+    font-family:'Playfair Display',serif;
+    margin-bottom:15px;
+
+}
+
+.subtitle{
+
+    max-width:650px;
+    margin:0 auto 50px;
+    font-size:18px;
+    line-height:30px;
+    color:#85756a;
+
+}
+
+.gallery{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+
+    max-width:1100px;
+    margin:auto;
+
+}
+
+.photo-card{
+
+    background:white;
+
+    padding:15px 15px 30px;
+
+    border-radius:8px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+    transform:rotate(-2deg);
+
+}
+
+.photo-card:nth-child(even){
+
+    transform:rotate(2deg);
+
+}
+
+.photo-card:hover{
+
+    transform:scale(1.05) rotate(0deg);
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:contain;
+
+    background:#fafafa;
+
+}
+
+.photo-card span{
+
+    display:block;
+
+    margin-top:18px;
+
+    font-size:17px;
+
+    font-family:'Playfair Display',serif;
+
+    color:#7b6658;
+
+}
+
+.story{
+
+    max-width:760px;
+
+    margin:80px auto 0;
+
+}
+
+.story p{
+
+    font-size:20px;
+
+    line-height:40px;
+
+    color:#6d5d52;
+
+    font-style:italic;
+
+}
+
+@media(max-width:900px){
+
+.gallery{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.photo-card img{
+
+height:330px;
+
+}
+
+}
+
+#video{
+
+    background:#fdf9f5;
+    text-align:center;
+    color:#5b4d42;
+
+}
+
+#video h2{
+
+    font-size:45px;
+    margin-bottom:15px;
+    font-family:'Playfair Display',serif;
+
+}
+
+.video-gallery{
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:50px;
+
+}
+
+.video-gallery video{
+
+    width:320px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.video-gallery video:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ===========================
+   ONE SPECIAL PHOTO
+=========================== */
+
+#special-photo{
+
+    background:#faf6f1;
+    text-align:center;
+    color:#5b4d42;
+    padding:100px 10%;
+
+}
+
+#special-photo h2{
+
+    font-size:48px;
+    font-family:'Playfair Display',serif;
+    margin-bottom:15px;
+
+}
+
+.big-photo{
+
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+
+}
+
+.big-photo img{
+
+    width:420px;
+    max-width:100%;
+
+    border:18px solid #ffffff;
+
+    border-radius:12px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+    transition:.4s;
+
+}
+
+.big-photo img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.photo-message{
+
+    max-width:760px;
+    margin:60px auto 0;
+
+}
+
+.photo-message p{
+
+    font-size:20px;
+    line-height:40px;
+    color:#6d5d52;
+    font-style:italic;
+
+}
+
+
+.message{
+    background:#fffaf6;
+    text-align:center;
+}
+
+.message h2{
+    font-size:42px;
+    margin-bottom:30px;
+    font-family:'Playfair Display',serif;
+}
+
+.message p{
+    max-width:700px;
+    margin:auto;
+    line-height:40px;
+    font-size:20px;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero h2{
+    font-size:25px;
+}
+
+.hero p{
+    font-size:16px;
+    line-height:30px;
+}
+
+.gallery img{
+    width:100%;
+    height:auto;
+}
+
+button{
+    width:100%;
+}
+
+#timer{
+    font-size:28px;
+}
+
+}
+
+/* ==========================
+   RESPONSIVE MOBILE
+========================== */
+
+@media screen and (max-width:768px){
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    padding:20px;
+}
+
+.hero h3{
+    font-size:15px;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero h2{
+    font-size:24px;
+}
+
+.hero p{
+    font-size:15px;
+    line-height:28px;
+}
+
+button{
+    width:220px;
+    padding:14px;
+}
+
+/* Gallery */
+
+.gallery{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.photo-card{
+    width:100%;
+}
+
+.photo-card img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+}
+
+/* Video */
+
+.video-gallery{
+    flex-direction:column;
+    align-items:center;
+}
+
+.video-gallery video{
+    width:100%;
+    max-width:350px;
+}
+
+/* Foto Besar */
+
+.big-photo img{
+    width:100%;
+    max-width:330px;
+}
+
+/* Story */
+
+.story p,
+.photo-message p,
+.message p{
+    font-size:17px;
+    line-height:32px;
+}
+
+/* Countdown */
+
+.countdown h2{
+    font-size:32px;
+}
+
+#timer{
+    font-size:24px;
+}
+
+/* Judul */
+
+#gallery h2,
+#video h2,
+#special-photo h2,
+.message h2{
+    font-size:34px;
+}
+
+.subtitle{
+    font-size:15px;
+    line-height:28px;
+}
+
+section{
+    padding:70px 20px;
+}
+
+}
